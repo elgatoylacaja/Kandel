@@ -1,9 +1,12 @@
+@import '../global.scss';
+
 .arcade-question {
     background: #fff;
     margin: 0.1em;
     padding: 2em 0;
     text-align: center;
     color: #222;
+    font-size: 2em;
 }
 
 .arcade-buttons-row {
@@ -12,8 +15,9 @@
 }
 
 .arcade-buttons-row-button {
-    width: 5em;
-    height: 5em;
+    width: 4em;
+    height: 4em;
+    font-size: 1.7em;
     background: #fff;
     margin: 0.1em;
     color: #222;
@@ -21,4 +25,10 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+    cursor: pointer;
+}
+
+.arcade-buttons-row-button:hover {
+    background: $pink;
+    color: #fff;
 }

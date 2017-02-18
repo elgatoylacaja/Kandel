@@ -1,3 +1,5 @@
+@import '../global.scss';
+
 .level {
 
     background: #fff;
@@ -9,17 +11,17 @@
     cursor: pointer;
 
     .level-number {
-        color: #222;
+        color: $gray;
         text-decoration: none;
     }
 
     .level-time {
-        color: #009f61;
+        color: $green; 
         text-decoration: none;
     }
 
     .level-stars {
-        color: #ff12a8;
+        color: $pink;
         text-decoration: none;
     }
 
@@ -27,7 +29,7 @@
 
 .level:hover {
 
-    background: #ff12a8;
+    background: $pink; 
 
     .level-number {
         color: #fff;

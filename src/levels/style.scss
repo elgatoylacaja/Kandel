@@ -13,11 +13,13 @@
     .level-number {
         color: $gray;
         text-decoration: none;
+        font-size: 1.5em;
     }
 
     .level-time {
         color: $green; 
         text-decoration: none;
+        font-size: 1.2em;
     }
 
     .level-stars {
@@ -25,7 +27,14 @@
         text-decoration: none;
     }
 
+    .level-stars-star {
+        margin: 0 0.1em;
+        font-size: 1.2em;
+    }
+
+
 }
+
 
 .level:hover {
 
@@ -46,6 +55,11 @@
 }
 
 
-.level-number {
-    font-size: 1.2em;
+.levels-back {
+    color: $green; 
+    padding: 1em 0;
+    font-size: 1.6em;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
 }

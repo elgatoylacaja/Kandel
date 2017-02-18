@@ -1,8 +1,13 @@
-import { ARCADE_INPUT } from './actions'
+import { ARCADE_INPUT, SUBMIT_ANSWER } from './actions'
 
 
 const defaultState = {
-    answer: null,
+    input: '',
+    question: {
+        operation: '19 + 23',
+        result: 42,
+    },
+    submitted: false,
 }
 
 
@@ -13,7 +18,13 @@ export default (state = defaultState, action) => {
     case ARCADE_INPUT:
       return {
         ...state,
-        answer: state.answer ? '' + state.answer + action.input : action.input
+        input: state.input + action.input,
+      }
+
+    case SUBMIT_ANSWER:
+      return {
+        ...state,
+        submitted: true
       }
 
     default:

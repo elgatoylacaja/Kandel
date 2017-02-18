@@ -1,86 +1,115 @@
 import React, { PropTypes } from 'react'
 
 
-const SubmitButton = ({value}) =>
-    <div className='arcade-buttons-row-button'>
-        {value}
+const Result = ({submitted, input, question}) =>
+    submitted 
+    ? <div className='arcade-result'>
+{question.result === Number(input)
+    ? <div>Correct</div>
+    : <div>Incorrect</div>
+}
     </div>
+    : null
 
 
-const BackButton = ({value}) =>
-    <div className='arcade-buttons-row-button'>
-        {value}
-    </div>
-
-
-const InputButton = ({value, arcadeInput}) =>
+const SubmitButton = ({submitAnswer}) =>
     <div 
         className='arcade-buttons-row-button'
-        onClick={e => arcadeInput(value)}
+        onClick={submitAnswer}
+    >
+        { String.fromCharCode('8629') }
+    </div>
+
+
+const BackButton = () =>
+    <div className='arcade-buttons-row-button'>
+        { String.fromCharCode('8592') }
+    </div>
+
+
+const InputButton = ({value, typeInput}) =>
+    <div 
+        className='arcade-buttons-row-button'
+        onClick={e => typeInput(value)}
     >
         <span>{value}</span>
     </div>
 
 
-const Row1 = ({arcadeInput}) =>
+const Row1 = ({typeInput}) =>
     <div className='arcade-buttons-row'>
-        <InputButton value={7} arcadeInput={arcadeInput} />
-        <InputButton value={8} arcadeInput={arcadeInput} />
-        <InputButton value={9} arcadeInput={arcadeInput} />
+        <InputButton value={7} typeInput={typeInput} />
+        <InputButton value={8} typeInput={typeInput} />
+        <InputButton value={9} typeInput={typeInput} />
     </div>
 
 
-const Row2 = ({arcadeInput}) =>
+const Row2 = ({typeInput}) =>
     <div className='arcade-buttons-row'>
-        <InputButton value={4} arcadeInput={arcadeInput} />
-        <InputButton value={5} arcadeInput={arcadeInput} />
-        <InputButton value={6} arcadeInput={arcadeInput} />
+        <InputButton value={4} typeInput={typeInput} />
+        <InputButton value={5} typeInput={typeInput} />
+        <InputButton value={6} typeInput={typeInput} />
     </div>
 
 
-const Row3 = ({arcadeInput}) =>
+const Row3 = ({typeInput}) =>
     <div className='arcade-buttons-row'>
-        <InputButton value={1} arcadeInput={arcadeInput} />
-        <InputButton value={2} arcadeInput={arcadeInput} />
-        <InputButton value={3} arcadeInput={arcadeInput} />
+        <InputButton value={1} typeInput={typeInput} />
+        <InputButton value={2} typeInput={typeInput} />
+        <InputButton value={3} typeInput={typeInput} />
     </div>
 
 
-const Row4 = ({arcadeInput}) =>
+const Row4 = ({typeInput, submitAnswer}) =>
     <div className='arcade-buttons-row'>
-        <BackButton value={String.fromCharCode('8592')} />
-        <InputButton value={0} arcadeInput={arcadeInput} />
-        <SubmitButton value={String.fromCharCode('8629')} />
+        <BackButton /> 
+        <InputButton value={0} typeInput={typeInput} />
+        <SubmitButton submitAnswer={submitAnswer} />
     </div>
 
 
-const Buttons = ({arcadeInput}) =>
+const Buttons = ({typeInput, submitAnswer}) =>
     <div className='arcade-buttons'>
-        <Row1 arcadeInput={arcadeInput} />
-        <Row2 arcadeInput={arcadeInput} />
-        <Row3 arcadeInput={arcadeInput} />
-        <Row4 arcadeInput={arcadeInput} />
+        <Row1 typeInput={typeInput} />
+        <Row2 typeInput={typeInput} />
+        <Row3 typeInput={typeInput} />
+        <Row4 typeInput={typeInput} submitAnswer={submitAnswer} />
+
     </div>
 
 
-const Question = ({answer}) =>
+const Question = ({input, question}) =>
     <div className='arcade-question'>
-        885 x 7 = {answer ? answer : '?'}
+        {question.operation} = {input ? input : '?'}
     </div>
 
 
 const Arcade = props =>
     <div className='screen'>
         <div className='arcade'>
-            <Question answer={props.answer} />
-            <Buttons arcadeInput={props.arcadeInput} />
+            <Result 
+                submitted={props.submitted} 
+                input={props.input} 
+                question={props.question} 
+            />
+            <Question 
+                question={props.question} 
+                input={props.input} 
+            />
+            <Buttons 
+                typeInput={props.typeInput} 
+                submitAnswer={props.submitAnswer} 
+            />
         </div>
     </div>
 
 
 Arcade.propTypes = {
-    answer: PropTypes.number,
-    arcadeInput: PropTypes.func.isRequired,
+    input: PropTypes.string.isRequired,
+    question: PropTypes.object.isRequired,
+    typeInput: PropTypes.func.isRequired,
+    submitAnswer: PropTypes.func.isRequired,
+    submitted: PropTypes.bool.isRequired,
 }
 
 

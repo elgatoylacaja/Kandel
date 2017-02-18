@@ -19,7 +19,7 @@ const Result = ({submitted, input, question}) =>
         : <IncorrectResult input={input} question={question} />
 
 
-const HeaderTyping = () =>
+const HeaderTyping = ({answers, totalQuestions}) =>
     <div className='arcade-header-typing'>
         <div className='arcade-header-typing-time'>
             00:23:15
@@ -28,21 +28,23 @@ const HeaderTyping = () =>
             pistas: 3/3
         </div>
         <div className='arcade-header-typing-remaining-questions'>
-            5/20
+            {answers.length} / {totalQuestions}
         </div>
     </div>
 
 
-const Header = ({submitted, input, question}) =>
-    submitted 
-        ? <Result input={input} question={question} />
-        : <HeaderTyping />
+const Header = (props) =>
+    props.submitted 
+        ? <Result {...props} />
+        : <HeaderTyping {...props} />
 
 
 Header.propTypes = {
     submitted: PropTypes.bool.isRequired,
     input: PropTypes.string.isRequired,
     question: PropTypes.object.isRequired,
+    totalQuestions: PropTypes.number.isRequired,
+    answers: PropTypes.array.isRequired,
 }
 
 export default Header

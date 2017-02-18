@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
 
 
-const SubmitButton = ({submitAnswer}) =>
+const SubmitButton = ({input, submitAnswer, answers, totalQuestions}) =>
     <div 
         className='arcade-submit-button'
-        onClick={submitAnswer}
+        onClick={e => submitAnswer(input, answers, totalQuestions)}
     >
         { String.fromCharCode('8629') }
     </div>
@@ -52,32 +52,31 @@ const Row3 = ({typeInput}) =>
     </div>
 
 
-const Row4 = ({typeInput, submitAnswer, eraseInput}) =>
+const Row4 = props =>
     <div className='arcade-buttons-row'>
-        <EraseButton eraseInput={eraseInput} /> 
-        <InputButton value={0} typeInput={typeInput} />
-        <SubmitButton submitAnswer={submitAnswer} />
+        <EraseButton eraseInput={props.eraseInput} /> 
+        <InputButton value={0} typeInput={props.typeInput} />
+        <SubmitButton {...props} />
     </div>
 
 
-const Buttons = ({typeInput, submitAnswer, eraseInput}) =>
+const Input = props =>
     <div className='arcade-buttons'>
-        <Row1 typeInput={typeInput} />
-        <Row2 typeInput={typeInput} />
-        <Row3 typeInput={typeInput} />
-        <Row4 
-            typeInput={typeInput} 
-            submitAnswer={submitAnswer} 
-            eraseInput={eraseInput} 
-        />
+        <Row1 typeInput={props.typeInput} />
+        <Row2 typeInput={props.typeInput} />
+        <Row3 typeInput={props.typeInput} />
+        <Row4 {...props} />
     </div>
 
 
-Buttons.propTypes = {
+Input.propTypes = {
     typeInput: PropTypes.func.isRequired,
     submitAnswer: PropTypes.func.isRequired,
     eraseInput: PropTypes.func.isRequired,
+    answers: PropTypes.array.isRequired,
+    input: PropTypes.string.isRequired,
+    totalQuestions: PropTypes.number.isRequired,
 }
 
 
-export default Buttons
+export default Input

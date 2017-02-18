@@ -1,0 +1,49 @@
+.level {
+
+    background: #fff;
+    margin: 0.1em 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1em;
+    text-decoration: none;
+    cursor: pointer;
+
+    .level-number {
+        color: #222;
+        text-decoration: none;
+    }
+
+    .level-time {
+        color: #009f61;
+        text-decoration: none;
+    }
+
+    .level-stars {
+        color: #ff12a8;
+        text-decoration: none;
+    }
+
+}
+
+.level:hover {
+
+    background: #ff12a8;
+
+    .level-number {
+        color: #fff;
+    }
+
+    .level-time {
+        color: #fff;
+    }
+
+    .level-stars {
+        color: #fff;
+    }
+
+}
+
+
+.level-number {
+    font-size: 1.2em;
+}

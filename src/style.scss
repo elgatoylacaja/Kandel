@@ -1,0 +1,19 @@
+@import './arcade/style.scss';
+@import './level/style.scss';
+
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: break-word;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #eee;
+}
+
+.screen {
+    margin: 0 auto;
+    max-width: 500px;
+}

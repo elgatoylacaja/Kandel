@@ -1,0 +1,37 @@
+@import '../../global.scss';
+
+.arcade-buttons-row {
+    display: flex;
+    align-content: stretch;
+}
+
+.arcade-input-button,
+.arcade-erase-button,
+.arcade-submit-button {
+    font-size: 1.7em;
+    margin: 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.arcade-input-button:hover,
+.arcade-erase-button:hover,
+.arcade-submit-button:hover {
+    background: $pink;
+    color: $white;
+}
+
+.arcade-input-button,
+.arcade-erase-button {
+    color: $gray;
+    background: $white;
+}
+
+.arcade-submit-button {
+    background: $green;
+    color: $white;
+}

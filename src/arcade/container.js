@@ -6,6 +6,9 @@ import Arcade from './Arcade'
 
 class ArcadeContainer extends Component {
 
+    componentDidMount = () =>
+        this.props.generateQuestion()
+
     render = () =>
         <Arcade {...this.props} />
 

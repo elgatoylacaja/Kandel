@@ -1,4 +1,5 @@
-import { GENERATE_QUESTION, ADD_ANSWER, FINISH_LEVEL } from './actions'
+import { GENERATE_QUESTION } from './actions'
+import { ADD_ANSWER, FINISH_LEVEL } from './actions'
 
 
 const defaultState = {

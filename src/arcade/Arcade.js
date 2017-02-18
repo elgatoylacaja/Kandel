@@ -29,6 +29,7 @@ Arcade.propTypes = {
     eraseInput: PropTypes.func.isRequired,
     submitted: PropTypes.bool.isRequired,
     answers: PropTypes.array.isRequired,
+    countdown: PropTypes.number.isRequired,
 }
 
 

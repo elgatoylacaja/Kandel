@@ -8,33 +8,25 @@ class ArcadeContainer extends Component {
 
     constructor(props) {
         super(props)
-        this.state = {
-            countdown: 100, 
-            limit: 8,
-            time: 0,
-        }
+        this.state = {countdown: 100, time: 0}
     }
 
     componentDidMount = () => {
         this.props.generateQuestion()
-        this.startTimer()
+        this.startTimer(8)
     }
 
-    startTimer = () => {
+    startTimer = limit => {
         let startTime = Date.now()
-        this.runTimer(startTime)
+        this.runTimer(startTime, limit)
     }
   
-    runTimer = startTime => {
+    runTimer = (startTime, limit) => {
         let time = Date.now() - startTime
-        this.setState({time})
-        let limit = this.state.limit
-        if (this.state.countdown > 0) {
-            let countdown = ((limit - (time/1000)) / limit) * 100
-            this.setState({countdown})
-        }
-        //if (this.state.countdown > 0) 
-            setTimeout(() => this.runTimer(startTime), 10)
+        let countdown = ((limit - (time/1000)) / limit) * 100
+        this.setState({time, countdown})
+        if (!this.props.submitted) 
+            setTimeout(() => this.runTimer(startTime, limit), 10)
     }
 
     render = () =>

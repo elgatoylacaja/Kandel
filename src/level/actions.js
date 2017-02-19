@@ -23,14 +23,19 @@ export const submitAnswer = (question, input, answers, totalQuestions, time) => 
 }
 
 
+const randomInt = (min, max) =>
+    Math.floor(Math.random() * (max - min + 1)) + min
+
+
 export const generateQuestion = () => {
 
-    const question = {
-        result: 42,
-        operator: '+',
-        operand1: '19',
-        operand2: '23',
-    }
+    let operators = ['+','-', '*']
+    let operator = operators[Math.floor(Math.random() * operators.length)]
+    let operand1 = randomInt(0,10)
+    let operand2 = randomInt(0,10)
+    let result = eval(operand1 + operator + operand2)
+
+    const question = {result, operator, operand1, operand2}
 
     return {
         type: GENERATE_QUESTION,

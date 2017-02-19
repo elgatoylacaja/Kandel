@@ -1,0 +1,13 @@
+@import '../../global.scss';
+
+
+.countdown {
+    margin: 0 0 0.1em;
+}
+
+
+.countdown-bar {
+    background: $pink;
+    height: 0.5em;
+    transition: width 1s linear;
+}

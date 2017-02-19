@@ -6,8 +6,9 @@ export const STOP_TIMER = 'STOP_TIMER'
 let timer = null
 
 
-export const resetTimer = () => ({
+export const resetTimer = limit => ({
     type: RESET_TIMER,
+    limit,
 })
 
 
@@ -22,8 +23,8 @@ export const stopTimer = () => {
 }
 
 
-export const startTimer = () => dispatch => {
+export const startTimer = limit => dispatch => {
     clearInterval(timer)
-    dispatch(resetTimer())
+    dispatch(resetTimer(limit))
     timer = setInterval(() => dispatch(updateTimer()), 1000)
 }

@@ -1,10 +1,22 @@
 @import '../global.scss';
-@import './input/style.scss';
-@import './question/style.scss';
-@import './header/style.scss';
+@import './typing/style.scss';
+@import './result/style.scss';
+@import './shared/style.scss';
+
 
 .arcade {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
+
+.arcade-header-typing,
+.arcade-result-correct,
+.arcade-result-incorrect, {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 1em 0;
+    text-transform: uppercase;
+}
+

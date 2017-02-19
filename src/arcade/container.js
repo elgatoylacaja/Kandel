@@ -6,10 +6,6 @@ import Arcade from './Arcade'
 
 class ArcadeContainer extends Component {
 
-    componentDidMount = () => {
-        this.props.createQuestion()
-    }
-
     render = () =>
         <Arcade {...this.props} />
 
@@ -17,9 +13,6 @@ class ArcadeContainer extends Component {
 
 
 export default connect(
-    state => ({
-       input: state.arcade.input, 
-       time: state.timer.time,
-    }), 
+    state => state.arcade,
     actions
 )(ArcadeContainer)

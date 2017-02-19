@@ -1,0 +1,11 @@
+@import '../../../global.scss';
+
+.arcade-result-incorrect {
+    background: $pink;
+    color: $white;
+}
+
+.arcade-result-correct {
+    background: $green;
+    color: $white;
+}

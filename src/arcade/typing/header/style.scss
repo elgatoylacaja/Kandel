@@ -1,0 +1,18 @@
+@import '../../../global.scss';
+
+.arcade-header-typing {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arcade-header-typing-time {
+    color: $pink;
+}
+
+.arcade-header-hints {
+    color: $dark-gray;
+}
+
+.arcade-header-typing-remaining-questions {
+    color: $green;
+}

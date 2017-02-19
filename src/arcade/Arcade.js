@@ -1,23 +1,15 @@
 import React, { PropTypes } from 'react'
-import Header from './header/Header'
-import Question from './question/Question'
-import Input from './input/Input'
+import Result from './result'
+import Typing from './typing'
 
-
-const GenerateQuestion = ({createQuestion}) =>
-    <div onClick={createQuestion}>
-        Create Question
-    </div>
 
 
 const Arcade = props =>
     <div className='screen'>
-        <div className='arcade'>
-            <Header {...props} />
-            <Question {...props} />
-            <Input {...props} />
-            <GenerateQuestion {...props} />
-        </div>
+        {props.submitted
+            ? <Result {...props} />
+            : <Typing {...props} /> 
+        }
     </div>
 
 
@@ -29,7 +21,6 @@ Arcade.propTypes = {
     eraseInput: PropTypes.func.isRequired,
     submitted: PropTypes.bool.isRequired,
     answers: PropTypes.array.isRequired,
-    time: PropTypes.number.isRequired,
 }
 
 

@@ -70,14 +70,13 @@ const Input = props =>
 
 
 Input.propTypes = {
-    typeInput: PropTypes.func.isRequired,
-    submitAnswer: PropTypes.func.isRequired,
-    eraseInput: PropTypes.func.isRequired,
-    answers: PropTypes.array.isRequired,
-    input: PropTypes.string.isRequired,
-    totalQuestions: PropTypes.number.isRequired,
-    time: PropTypes.number.isRequired,
-    question: PropTypes.object.isRequired,
+    typeInput: PropTypes.func,
+    submitAnswer: PropTypes.func,
+    eraseInput: PropTypes.func,
+    answers: PropTypes.array,
+    input: PropTypes.string,
+    totalQuestions: PropTypes.number,
+    question: PropTypes.object,
 }
 
 

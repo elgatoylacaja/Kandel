@@ -30,6 +30,7 @@ Arcade.propTypes = {
     submitted: PropTypes.bool.isRequired,
     answers: PropTypes.array.isRequired,
     countdown: PropTypes.number.isRequired,
+    time: PropTypes.number.isRequired,
 }
 
 

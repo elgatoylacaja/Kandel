@@ -3,9 +3,9 @@ export const FINISH_LEVEL = 'FINISH_LEVEL'
 export const GENERATE_QUESTION = 'GENERATE_QUESTION'
 
 
-const addAnswer = () => ({
+const addAnswer = (question, input, time) => ({
     type: ADD_ANSWER,
-    answer: {}
+    answer: {question, input, time}
 })
 
 
@@ -14,9 +14,9 @@ const finishLevel = () => ({
 })
 
 
-export const submitAnswer = (input, answers, totalQuestions) => dispatch => {
+export const submitAnswer = (question, input, answers, totalQuestions, time) => dispatch => {
     if (input) {
-        dispatch(addAnswer())
+        dispatch(addAnswer(question, input, time))
         if (answers.length + 1 === totalQuestions)
             dispatch(finishLevel()) 
     }

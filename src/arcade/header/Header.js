@@ -1,6 +1,15 @@
 import React, { PropTypes } from 'react'
 
 
+const timeToString = time => {
+    let minutes = Math.floor(time / (1000 * 60)).toString()
+    minutes = minutes.length < 2 ? '0' + minutes : minutes
+    let seconds = Math.floor(time / 1000 % 60 ).toString()
+    seconds = seconds.length < 2 ? '0' + seconds : seconds
+    return minutes + ':' + seconds
+}
+
+
 const CountdownBar = ({countdown}) =>
     <div className='arcade-countdownbar'>
         <div 
@@ -32,7 +41,7 @@ const Result = ({submitted, input, question}) =>
 const HeaderTyping = ({answers, totalQuestions, time}) =>
     <div className='arcade-header-typing'>
         <div className='arcade-header-typing-time'>
-            { time }
+            { timeToString(time) }
         </div>
         <div className='arcade-header-typing-hints'>
             pistas: 3/3
@@ -62,6 +71,8 @@ HeaderWrapper.propTypes = {
     question: PropTypes.object.isRequired,
     totalQuestions: PropTypes.number.isRequired,
     answers: PropTypes.array.isRequired,
+    countdown: PropTypes.number.isRequired,
+    time: PropTypes.number.isRequired,
 }
 
 export default HeaderWrapper

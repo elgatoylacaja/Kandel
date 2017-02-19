@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
 
 
-const SubmitButton = ({input, submitAnswer, answers, totalQuestions}) =>
+const SubmitButton = ({question, input, submitAnswer, answers, totalQuestions, time}) =>
     <div 
         className='arcade-submit-button'
-        onClick={e => submitAnswer(input, answers, totalQuestions)}
+        onClick={e => submitAnswer(question, input, answers, totalQuestions, time)}
     >
         { String.fromCharCode('8629') }
     </div>
@@ -76,6 +76,8 @@ Input.propTypes = {
     answers: PropTypes.array.isRequired,
     input: PropTypes.string.isRequired,
     totalQuestions: PropTypes.number.isRequired,
+    time: PropTypes.number.isRequired,
+    question: PropTypes.object.isRequired,
 }
 
 

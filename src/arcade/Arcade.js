@@ -4,9 +4,9 @@ import Question from './question/Question'
 import Input from './input/Input'
 
 
-const GenerateQuestion = ({generateQuestion}) =>
-    <div onClick={generateQuestion}>
-        Generate Question
+const GenerateQuestion = ({createQuestion}) =>
+    <div onClick={createQuestion}>
+        Create Question
     </div>
 
 
@@ -29,7 +29,6 @@ Arcade.propTypes = {
     eraseInput: PropTypes.func.isRequired,
     submitted: PropTypes.bool.isRequired,
     answers: PropTypes.array.isRequired,
-    countdown: PropTypes.number.isRequired,
     time: PropTypes.number.isRequired,
 }
 

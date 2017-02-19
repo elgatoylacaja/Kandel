@@ -10,11 +10,11 @@ const timeToString = time => {
 }
 
 
-const CountdownBar = ({countdown}) =>
+const CountdownBar = () =>
     <div className='arcade-countdownbar'>
         <div 
             className='arcade-countdownbar-line'
-            style={{'width': countdown + '%'}}
+            style={{'width': '30%'}}
         >
         </div>
     </div>
@@ -71,7 +71,6 @@ HeaderWrapper.propTypes = {
     question: PropTypes.object.isRequired,
     totalQuestions: PropTypes.number.isRequired,
     answers: PropTypes.array.isRequired,
-    countdown: PropTypes.number.isRequired,
     time: PropTypes.number.isRequired,
 }
 

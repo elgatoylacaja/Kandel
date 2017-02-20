@@ -7,7 +7,7 @@ import { actions as timerActions } from '../../timer'
 class ArcadeContainer extends Component {
 
     componentDidMount = () => {
-        this.props.createQuestion()
+        this.props.createQuestion(this.props.level)
         this.props.startTimer(10000)
     }
 

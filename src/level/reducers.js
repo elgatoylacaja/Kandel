@@ -1,4 +1,4 @@
-import { SUBMIT_ANSWER } from '../arcade/actions'
+import { SUBMIT_ANSWER, FINISH_QUESTION } from '../arcade/actions'
 import { START_LEVEL } from './actions'
 
 
@@ -6,7 +6,7 @@ const defaultState = {
     level: 1,
     totalQuestions: 2,
     answers: [],
-    finished: false,
+    levelFinished: false,
 }
 
 
@@ -18,15 +18,20 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         answers: [],
-        finished: false,
+        levelFinished: false,
         level: action.level,
     }
         
     case SUBMIT_ANSWER:
       return {
         ...state,
-        answers: state.answers.concat(action.answer),
-        finished: (state.answers.length + 1 === state.totalQuestions),
+        answers: state.answers.concat(action.answer)
+    }
+
+    case FINISH_QUESTION:
+      return {
+        ...state,
+        levelFinished: (state.answers.length === state.totalQuestions)
     }
         
     default:

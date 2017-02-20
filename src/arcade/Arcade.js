@@ -3,7 +3,6 @@ import Result from './result'
 import Typing from './typing'
 
 
-
 const Arcade = props =>
     <div className='screen'>
         {props.submitted
@@ -21,6 +20,7 @@ Arcade.propTypes = {
     eraseInput: PropTypes.func.isRequired,
     submitted: PropTypes.bool.isRequired,
     answers: PropTypes.array.isRequired,
+    levelFinished: PropTypes.bool.isRequired,
 }
 
 

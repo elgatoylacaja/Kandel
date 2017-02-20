@@ -26,10 +26,10 @@ const LevelNumber = ({level}) =>
     </span>
 
 
-const Level = ({level, selectLevel}) =>
+const Level = ({level, startLevel}) =>
     <div 
         className='level'
-        onClick={e => selectLevel(level.level)}
+        onClick={e => startLevel(level.level)}
     >
         <LevelNumber level={level.level} />
         <LevelTime time={level.time} />
@@ -46,32 +46,32 @@ const BackToArcade = () =>
     </a>
 
 
-const Levels = ({levels, selectLevel}) =>
+const LevelList = ({levels, startLevel}) =>
     <div className='levels'>
         {levels.map((level, i) =>
             <Level 
                 key={i} 
                 level={level} 
-                selectLevel={selectLevel}
+                startLevel={startLevel}
             />
         )}
     </div>
 
 
-const LevelsScreen = ({levels, selectLevel}) =>
+const Levels = ({levels, startLevel}) =>
     <div className='screen'>
         <BackToArcade />
-        <Levels 
+        <LevelList 
             levels={levels} 
-            selectLevel={selectLevel}
+            startLevel={startLevel}
         />
     </div>
 
 
-LevelsScreen.propTypes = {
+Levels.propTypes = {
     levels: PropTypes.array.isRequired,
-    selectLevel: PropTypes.func.isRequired,
+    startLevel: PropTypes.func.isRequired,
 }
 
 
-export default LevelsScreen
+export default Levels

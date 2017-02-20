@@ -2,7 +2,8 @@ import {
     ERASE_INPUT, 
     ARCADE_INPUT, 
     SUBMIT_ANSWER, 
-    GENERATE_QUESTION 
+    GENERATE_QUESTION,
+    FINISH_QUESTION, 
 } from './actions'
 
 
@@ -47,6 +48,19 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         submitted: true,
+    }
+
+    case FINISH_QUESTION:
+      return {
+        ...state,
+        input: '',
+        question: {
+            operand1: null,
+            operand2: null,
+            operator: null,
+            result: null,
+        },
+        submitted: false,
     }
 
     default:

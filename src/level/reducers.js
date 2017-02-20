@@ -1,5 +1,5 @@
 import { GENERATE_QUESTION } from './actions'
-import { ADD_ANSWER, FINISH_LEVEL } from './actions'
+import { SUBMIT_ANSWER } from './actions'
 
 
 const defaultState = {
@@ -27,17 +27,12 @@ export default (state = defaultState, action) => {
         submitted: false,
       }
 
-    case FINISH_LEVEL:
-      return {
-        ...state,
-        finished: true,
-      }
-
-    case ADD_ANSWER:
+    case SUBMIT_ANSWER:
       return {
         ...state,
         submitted: true,
-        answers: state.answers.concat(action.answer)
+        answers: state.answers.concat(action.answer),
+        finished: (state.answers.length + 1 === state.totalQuestions),
     }
         
     default:

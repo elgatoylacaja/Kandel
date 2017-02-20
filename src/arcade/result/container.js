@@ -7,7 +7,6 @@ import { actions as timerActions } from '../../timer'
 class ArcadeContainer extends Component {
 
     componentDidMount = () => {
-        this.props.stopTimer()
         setTimeout(this.props.createQuestion, 3000)
     }
 

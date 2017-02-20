@@ -11,6 +11,10 @@ class ArcadeContainer extends Component {
         this.props.startTimer(10000)
     }
 
+    componentWillUnmount = () => {
+        this.props.stopTimer()
+    }
+
     render = () =>
         <Typing {...this.props} />
 

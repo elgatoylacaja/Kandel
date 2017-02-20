@@ -1,0 +1,99 @@
+@import '../global.scss';
+
+.finished {
+    position: relative;
+    overflow: hidden;
+}
+
+.finished-background {
+    background: $green;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.finished-content {
+    width: 80%;
+    margin: 5em auto 0;
+    position: relative;
+}
+
+.finished-header {
+    background: $white; 
+    width: 100%;
+    text-align: center;
+    padding: 2em 0 1em;
+}
+
+.finished-performance-level {
+    margin: 1em 0 0;
+    font-size: 2em;
+}
+
+.finished-performance-stars {
+    margin: 0.5em 0;
+}
+
+.finished-performance-star {
+    color: $pink;
+    font-size: 2.5em;
+    margin: 0.1em;
+}
+
+.finished-performance-correct {
+    color: $gray;
+    margin: 1em 0;
+}
+
+.finished-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+
+.finished-replay,
+.finished-next {
+    color: $white;
+    cursor: pointer;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0.6em 0;
+    margin-top: 0.15em;
+}
+
+.finished-replay {
+    background: $light-gray;
+    flex-grow: 1;
+}
+
+.finished-next {
+    background: $pink;
+    flex-grow: 2;
+    margin-left: 0.15em;
+}
+
+.finished-replay:hover,
+.finished-next:hover {
+    opacity: 0.5;
+}
+
+.finished-menu {
+    width: 100%;
+    color: #333;
+    text-align: center;
+    margin: 2em 0 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.finished-logo {
+    width: 100%;
+    color: $light-gray;
+    text-align: center;
+    font-size: 3em;
+}

@@ -1,9 +1,21 @@
-import { ERASE_INPUT, ARCADE_INPUT } from './actions'
-import { GENERATE_QUESTION } from '../level/actions'
+import { 
+    ERASE_INPUT, 
+    ARCADE_INPUT, 
+    SUBMIT_ANSWER, 
+    GENERATE_QUESTION 
+} from './actions'
+
 
 
 const defaultState = {
-    input: ''
+    input: '',
+    question: {
+        operand1: null,
+        operand2: null,
+        operator: null,
+        result: null,
+    },
+    submitted: false,
 }
 
 
@@ -14,9 +26,11 @@ export default (state = defaultState, action) => {
     case GENERATE_QUESTION:
       return {
         ...state,
-        input: ''
+        question: action.question,
+        submitted: false,
+        input: '',
       }
-
+        
     case ARCADE_INPUT:
       return {
         ...state,
@@ -28,7 +42,13 @@ export default (state = defaultState, action) => {
         ...state,
         input: state.input.slice(0, -1),
       }
-        
+
+    case SUBMIT_ANSWER:
+      return {
+        ...state,
+        submitted: true,
+    }
+
     default:
       return state
 

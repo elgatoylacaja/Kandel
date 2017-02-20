@@ -1,3 +1,5 @@
+import math from 'mathjs'
+
 export const ADD_ANSWER = 'ADD_ANSWER'
 export const FINISH_LEVEL = 'FINISH_LEVEL'
 export const GENERATE_QUESTION = 'GENERATE_QUESTION'
@@ -32,7 +34,7 @@ export const createQuestion = () => {
     let operator = operators[Math.floor(Math.random() * operators.length)]
     let operand1 = randomInt(0,10)
     let operand2 = randomInt(0,10)
-    let result = eval(operand1 + operator + operand2)
+    let result = math.eval(operand1 + operator + operand2)
     return {
         type: GENERATE_QUESTION,
         question: {result, operator, operand1, operand2}

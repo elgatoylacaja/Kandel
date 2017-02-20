@@ -19,6 +19,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "sass": "sass --watch src:public/css"
+    "sass": "sass --watch src/app:public/css"
   }
 }

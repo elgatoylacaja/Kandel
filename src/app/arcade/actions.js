@@ -1,4 +1,4 @@
-import createOperation from '../operations'
+import createOperation from '../../operations'
 
 export const ARCADE_INPUT = 'ARCADE_INPUT'
 export const ERASE_INPUT = 'ERASE_INPUT'

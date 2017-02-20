@@ -3,9 +3,9 @@
 Moravec Frontend. 
 
 Learn more about this project:
-[TEDx talk about Moravec by Fede Zimmerman](https://www.youtube.com/watch?v=an9BuNe4sqA)
-[Review by "El gato y la caja"](https://elgatoylacaja.com.ar/moravec/)
-[Download at Google Play - old version](https://play.google.com/store/apps/details?id=tedxperiments.math.entrenamente)
+* [TEDx talk about Moravec by Fede Zimmerman](https://www.youtube.com/watch?v=an9BuNe4sqA)
+* [Review by "El gato y la caja"](https://elgatoylacaja.com.ar/moravec/)
+* [Download at Google Play - old version](https://play.google.com/store/apps/details?id=tedxperiments.math.entrenamente)
 
 ## Running
 ```bash
@@ -16,7 +16,7 @@ npm run sass # start the css compiler
 
 ## How to contribute
 
-Contributions are welcome. Here's a list of fundamenetal knowledge you'll need to get started.
+Contributions are more than welcome. Here's a list of fundamenetal knowledge you'll need to get started.
 
 ### Redux
 * [Redux official guide](http://redux.js.org/)

@@ -14,12 +14,12 @@ const Arcade = props =>
 
 Arcade.propTypes = {
     input: PropTypes.string.isRequired,
-    question: PropTypes.object.isRequired,
+    operation: PropTypes.object.isRequired,
     typeInput: PropTypes.func.isRequired,
-    submitAnswer: PropTypes.func.isRequired,
+    submitTrial: PropTypes.func.isRequired,
     eraseInput: PropTypes.func.isRequired,
     submitted: PropTypes.bool.isRequired,
-    answers: PropTypes.array.isRequired,
+    trials: PropTypes.array.isRequired,
     levelFinished: PropTypes.bool.isRequired,
 }
 

@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
 
 
-const IncorrectHeader = ({input, question}) =>
+const IncorrectHeader = ({input, operation}) =>
     <div className='arcade-result-incorrect'>
-        La respuesta era <b>{question.result}</b>
+        La respuesta era <b>{operation.result}</b>
     </div>
 
 
@@ -14,15 +14,18 @@ const CorrectHeader = () =>
 
 
 const Header = props =>
-    props.question.result === Number(props.input)
+    props.operation.result === Number(props.input)
         ? <CorrectHeader />
-        : <IncorrectHeader input={props.input} question={props.question} />
+        : <IncorrectHeader 
+                input={props.input} 
+                operation={props.operation} 
+          />
 
 
 Header.propTypes = {
     submitted: PropTypes.bool.isRequired,
     input: PropTypes.string.isRequired,
-    question: PropTypes.object.isRequired,
+    operation: PropTypes.object.isRequired,
 }
 
 

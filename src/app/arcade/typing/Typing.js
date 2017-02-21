@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import Header from './header'
-import { Input, Question } from '../shared'
+import { Input, Operation } from '../shared'
 import { Countdown } from '../../timer'
 
 
@@ -8,18 +8,19 @@ const TypingArcade = props =>
     <div className='arcade'>
         <Header {...props} />
         <Countdown />
-        <Question {...props} />
+        <Operation {...props} />
         <Input {...props} />
     </div>
 
 
 TypingArcade.propTypes = {
     input: PropTypes.string.isRequired,
-    question: PropTypes.object.isRequired,
+    operation: PropTypes.object.isRequired,
     typeInput: PropTypes.func.isRequired,
-    submitAnswer: PropTypes.func.isRequired,
+    submitTrial: PropTypes.func.isRequired,
     eraseInput: PropTypes.func.isRequired,
-    answers: PropTypes.array.isRequired,
+    trials: PropTypes.array.isRequired,
+    totalTrials: PropTypes.number.isRequired,
     time: PropTypes.number.isRequired,
 }
 

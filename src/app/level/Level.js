@@ -11,8 +11,9 @@ const Level = props =>
 
 Level.propTypes = {
     level: PropTypes.number.isRequired,
-    totalQuestions: PropTypes.number.isRequired,
-    answers: PropTypes.array.isRequired,
+    totalCorrect: PropTypes.number.isRequired,
+    totalTrials: PropTypes.number.isRequired,
+    trials: PropTypes.array.isRequired,
     levelFinished: PropTypes.bool.isRequired,
     startLevel: PropTypes.func.isRequired,
 }

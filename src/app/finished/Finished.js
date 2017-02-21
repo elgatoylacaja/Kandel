@@ -41,7 +41,7 @@ const Congratulations = () =>
     </div>
 
 
-const Performance = ({level}) =>
+const Performance = ({level, totalCorrect, totalTrials}) =>
     <div className='finished-performance'>
         <div className='finished-performance-level'>
             Nivel {level}
@@ -52,15 +52,19 @@ const Performance = ({level}) =>
             <i className='fa fa-star finished-performance-star'></i>
         </div>
         <div className='finished-performance-correct'>
-            18 / 20 correctas
+            {totalCorrect + ' / ' + totalTrials + ' correctas'}
         </div>
     </div>
 
 
-const Header = ({level}) =>
+const Header = ({level, totalCorrect, totalTrials}) =>
     <div className='finished-header'>
         <Congratulations />
-        <Performance level={level} />
+        <Performance 
+            level={level} 
+            totalCorrect={totalCorrect} 
+            totalTrials={totalTrials}
+        />
     </div>
 
 
@@ -89,6 +93,8 @@ const Finished = props =>
 
 Finished.propTypes = {
     level: PropTypes.number.isRequired,
+    totalCorrect: PropTypes.number.isRequired,
+    totalTrials: PropTypes.number.isRequired,
     startLevel: PropTypes.func.isRequired,
 }
 

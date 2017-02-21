@@ -24,9 +24,9 @@ const Hints = () =>
     </div>
 
 
-const LevelState = ({totalQuestions, answers}) =>
-    <div className='arcade-header-typing-remaining-questions'>
-        {answers.length} / {totalQuestions}
+const LevelState = ({totalTrials, trials}) =>
+    <div className='arcade-header-typing-remaining-trials'>
+        {trials.length + 1} / {totalTrials}
     </div>
 
 
@@ -35,15 +35,15 @@ const Typing = props =>
         <Time time={props.time} />
         <Hints />
         <LevelState 
-            totalQuestions={props.totalQuestions} 
-            answers={props.answers} 
+            totalTrials={props.totalTrials} 
+            trials={props.trials} 
         />
     </div>
 
 
 Typing.propTypes = {
-    answers: PropTypes.array.isRequired,
-    totalQuestions: PropTypes.number.isRequired,
+    trials: PropTypes.array.isRequired,
+    totalTrials: PropTypes.number.isRequired,
     time: PropTypes.number.isRequired,
 }
 

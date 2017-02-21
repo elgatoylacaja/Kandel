@@ -7,12 +7,12 @@ import { actions as timerActions } from '../../timer'
 class ArcadeContainer extends Component {
 
     componentDidMount = () => 
-        setTimeout(this.finishQuestion, 3000)
+        setTimeout(this.finishTrial, 3000)
 
-    finishQuestion = () => {
-        this.props.finishQuestion()
-        if (this.props.answers.length < this.props.totalQuestions)
-            this.props.createQuestion(this.props.level)
+    finishTrial = () => {
+        this.props.finishTrial()
+        if (this.props.trials.length < this.props.totalTrials)
+            this.props.createTrial(this.props.level)
     }
 
     render = () =>

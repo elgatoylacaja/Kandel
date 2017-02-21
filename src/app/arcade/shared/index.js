@@ -1,4 +1,4 @@
 import Input from './input'
-import Question from './question'
+import Operation from './operation'
 
-export {Input, Question}
+export {Input, Operation}

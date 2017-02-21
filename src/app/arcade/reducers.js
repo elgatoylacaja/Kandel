@@ -1,16 +1,16 @@
 import { 
-    ERASE_INPUT, 
     ARCADE_INPUT, 
-    SUBMIT_ANSWER, 
-    GENERATE_QUESTION,
-    FINISH_QUESTION, 
+    ERASE_INPUT, 
+    CREATE_TRIAL,
+    SUBMIT_TRIAL, 
+    FINISH_TRIAL, 
 } from './actions'
 
 
 
 const defaultState = {
     input: '',
-    question: {
+    operation: {
         operand1: null,
         operand2: null,
         operator: null,
@@ -24,10 +24,10 @@ export default (state = defaultState, action) => {
 
   switch (action.type) {
 
-    case GENERATE_QUESTION:
+    case CREATE_TRIAL:
       return {
         ...state,
-        question: action.question,
+        operation: action.operation,
         submitted: false,
         input: '',
       }
@@ -44,17 +44,17 @@ export default (state = defaultState, action) => {
         input: state.input.slice(0, -1),
       }
 
-    case SUBMIT_ANSWER:
+    case SUBMIT_TRIAL:
       return {
         ...state,
         submitted: true,
     }
 
-    case FINISH_QUESTION:
+    case FINISH_TRIAL:
       return {
         ...state,
         input: '',
-        question: {
+        operation: {
             operand1: null,
             operand2: null,
             operator: null,

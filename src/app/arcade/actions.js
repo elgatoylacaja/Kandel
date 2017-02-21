@@ -2,14 +2,14 @@ import createOperation from '../../operations'
 
 export const ARCADE_INPUT = 'ARCADE_INPUT'
 export const ERASE_INPUT = 'ERASE_INPUT'
-export const SUBMIT_ANSWER = 'SUBMIT_ANSWER'
-export const GENERATE_QUESTION = 'GENERATE_QUESTION'
-export const FINISH_QUESTION = 'FINISH_QUESTION'
+export const CREATE_TRIAL = 'CREATE_TRIAL'
+export const SUBMIT_TRIAL = 'SUBMIT_TRIAL'
+export const FINISH_TRIAL = 'FINISH_TRIAL'
 
 
-export const createQuestion = (level) => ({
-    type: GENERATE_QUESTION,
-    question: createOperation(level)
+export const createTrial = (level) => ({
+    type: CREATE_TRIAL,
+    operation: createOperation(level)
 })
 
 
@@ -23,12 +23,12 @@ export const eraseInput = () => ({
 })
 
 
-export const submitAnswer = (question, input, time) => ({
-    type: SUBMIT_ANSWER,
-    answer: {question, input, time}
+export const submitTrial = (operation, input, time) => ({
+    type: SUBMIT_TRIAL,
+    trial: {operation, time, input:Number(input)}
 })
 
 
-export const finishQuestion = () => ({
-    type: FINISH_QUESTION,
+export const finishTrial = () => ({
+    type: FINISH_TRIAL,
 })

@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
 
 
-const SubmitButton = ({submitAnswer, question, input, time}) =>
+const SubmitButton = ({submitTrial, operation, input, time}) =>
     <div 
         className='arcade-submit-button'
-        onClick={e => submitAnswer(question, input, time)}
+        onClick={e => submitTrial(operation, input, time)}
     >
         { String.fromCharCode('8629') }
     </div>
@@ -71,12 +71,10 @@ const Input = props =>
 
 Input.propTypes = {
     typeInput: PropTypes.func,
-    submitAnswer: PropTypes.func,
+    submitTrial: PropTypes.func,
     eraseInput: PropTypes.func,
-    answers: PropTypes.array,
     input: PropTypes.string,
-    totalQuestions: PropTypes.number,
-    question: PropTypes.object,
+    operation: PropTypes.object,
 }
 
 

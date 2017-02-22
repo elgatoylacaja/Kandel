@@ -53,7 +53,7 @@ const ListHeader = () =>
 const GenericHeader = () =>
     <a 
         className='generic-header'
-        href='/arcade'
+        href='/'
     >
         { String.fromCharCode('8592') + ' Stats' }
     </a>

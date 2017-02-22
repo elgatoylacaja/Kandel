@@ -40,7 +40,7 @@ const Level = ({level, startLevel}) =>
 const GenericHeader = () =>
     <a 
         className='generic-header'
-        href='/arcade'
+        href='/'
     >
         { String.fromCharCode('8592') + ' Arcade' }
     </a>

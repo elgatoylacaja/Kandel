@@ -1,0 +1,52 @@
+@import '../global.scss';
+
+.stats-list-header {
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background: $white;
+    margin: 0.2em 0;
+    padding: 1em;
+}
+
+.stats-row-type {
+    font-size: 1.5em;
+    color: $gray;
+    width: 4em;
+}
+
+.stats-row-time {
+    color: $green;
+}
+
+.stats-row-efficacy {
+    color: $pink;
+    font-size: 1.5em;
+}
+
+.stats-row-empty {
+    color: $white;
+    display: flex;
+    background: $light-gray;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 0.2em 0;
+    padding: 1em;
+}
+
+.stats-row-empty-type {
+    font-size: 1.5em;
+    width: 4em;
+}
+
+.stats-row-empty-message {
+}

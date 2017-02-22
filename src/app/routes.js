@@ -3,6 +3,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 import Level from './level'
 import Levels from './levels'
+import Stats from './stats'
 
 
 export default () =>
@@ -11,5 +12,6 @@ export default () =>
             <IndexRoute component={Levels} />
             <Route path='/levels' component={Levels} />
             <Route path='/arcade' component={Level} />
+            <Route path='/stats' component={Stats} />
         </Route>
     </Router>

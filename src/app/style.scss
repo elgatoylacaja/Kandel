@@ -2,6 +2,7 @@
 @import './levels/style.scss';
 @import './level/style.scss';
 @import './finished/style.scss';
+@import './stats/style.scss';
 
 
 * {
@@ -18,4 +19,14 @@ body {
 .screen {
     margin: 0 auto;
     max-width: 500px;
+}
+
+
+.generic-header {
+    color: $green; 
+    padding: 1em 0;
+    font-size: 1.6em;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
 }

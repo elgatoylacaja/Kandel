@@ -37,9 +37,9 @@ const Level = ({level, startLevel}) =>
     </div>
 
 
-const BackToArcade = () =>
+const GenericHeader = () =>
     <a 
-        className='levels-back'
+        className='generic-header'
         href='/arcade'
     >
         { String.fromCharCode('8592') + ' Arcade' }
@@ -60,7 +60,7 @@ const LevelList = ({levels, startLevel}) =>
 
 const Levels = ({levels, startLevel}) =>
     <div className='screen'>
-        <BackToArcade />
+        <GenericHeader />
         <LevelList 
             levels={levels} 
             startLevel={startLevel}

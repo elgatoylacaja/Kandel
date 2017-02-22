@@ -1,0 +1,19 @@
+@import '../../global.scss';
+
+.arcade-feedback-incorrect,
+.arcade-feedback-correct {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.arcade-feedback-incorrect {
+    background: $pink;
+    color: $white;
+}
+
+.arcade-feedback-correct {
+    background: $green;
+    color: $white;
+}

@@ -1,4 +1,4 @@
-import { SUBMIT_TRIAL, FINISH_TRIAL } from '../arcade/actions'
+import { SUBMIT_TRIAL } from '../arcade/actions'
 import { START_LEVEL } from './actions'
 
 
@@ -29,15 +29,10 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         trials: state.trials.concat(action.trial),
+        levelFinished: (state.trials.length + 1 === state.totalTrials),
         totalCorrect: action.trial.input === action.trial.operation.result
                         ? state.totalCorrect + 1
                         : state.totalCorrect
-    }
-
-    case FINISH_TRIAL:
-      return {
-        ...state,
-        levelFinished: (state.trials.length === state.totalTrials)
     }
         
     default:

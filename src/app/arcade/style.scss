@@ -1,22 +1,23 @@
 @import '../global.scss';
-@import './typing/style.scss';
-@import './result/style.scss';
-@import './shared/style.scss';
+@import './feedback/style.scss';
+@import './header/style.scss';
+@import './operation/style.scss';
+@import './input/style.scss';
 
 
 .arcade {
     width: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 
 .arcade-header-typing,
-.arcade-result-correct,
-.arcade-result-incorrect, {
+.arcade-feedback-correct,
+.arcade-feedback-incorrect, {
     font-size: 1.5em;
     text-align: center;
     padding: 1em 0;
     text-transform: uppercase;
 }
-

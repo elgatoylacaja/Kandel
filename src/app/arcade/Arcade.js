@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
 import Feedback from './feedback'
 import Header from './header'
+import Countdown from './countdown'
 import Input from './input'
 import Operation from './operation'
-import { Countdown } from '../timer'
 
 
 const Arcade = props =>
@@ -19,14 +19,14 @@ const Arcade = props =>
 
 
 Arcade.propTypes = {
+    trials: PropTypes.array.isRequired,
     totalTrials: PropTypes.number.isRequired,
     time: PropTypes.number.isRequired,
     trial: PropTypes.object.isRequired,
     feedback: PropTypes.object.isRequired,
     typeInput: PropTypes.func.isRequired,
-    submitTrial: PropTypes.func.isRequired,
     eraseInput: PropTypes.func.isRequired,
-    trials: PropTypes.array.isRequired,
+    submitTrial: PropTypes.func.isRequired,
 }
 
 

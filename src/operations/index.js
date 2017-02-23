@@ -1,12 +1,16 @@
-import level01 from './level01'
-import level02 from './level02'
-import level03 from './level03'
+import difficultyOpTypes from './difficultyOpTypes'
+import levelDifficulties from './levelDifficulties'
+import selectRandomOpType from './selectRandomOpType'
+import buildOperation from './buildOperation'
 
 
-const CREATE_OPERATION = [
-    level01, level02, level03
-]
+const createOperation = level => {
+    let difficulty = levelDifficulties[level]
+    let probabilities = difficultyOpTypes[difficulty]
+    let opType = selectRandomOpType(probabilities)
+    let operation = buildOperation(opType) 
+    return operation
+}
 
 
-export default level =>
-    CREATE_OPERATION[ level - 1 ]()
+export default createOperation

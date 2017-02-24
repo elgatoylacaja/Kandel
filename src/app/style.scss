@@ -4,6 +4,8 @@
 @import './level/style.scss';
 @import './finished/style.scss';
 @import './stats/style.scss';
+@import './tutorial/style.scss';
+@import './tutorials/style.scss';
 
 
 * {
@@ -22,7 +24,6 @@ body {
     max-width: 500px;
 }
 
-
 .generic-header {
     color: $green; 
     padding: 1em 0;
@@ -30,4 +31,16 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     display: block;
+}
+
+.generic-logo {
+    margin: 4em 0 0;    
+}
+
+.generic-logo-icon {
+    width: 5em;
+    height: 5em;
+    background: #888;
+    border-radius: 40em;
+    margin: 0 auto;
 }

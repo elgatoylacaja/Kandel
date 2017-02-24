@@ -1,0 +1,33 @@
+@import '../global.scss';
+
+.tutorial {
+    background: $white;
+}
+
+.tutorial-title {
+    font-size: 1.8em;
+    color: $pink;
+    background: $white;
+    padding: 0.8em;
+    text-align: center;
+}
+
+.tutorial-video {
+    background: #aaa;
+    height: 15em;
+    width: 100%;
+}
+
+.tutorial-examples {
+    padding: 2em;
+}
+
+.tutorial-examples-title {
+    font-size: 1.3em;
+    color: $green;
+    margin: 0 0 1em;
+    text-transform: uppercase;
+}
+
+.tutorial-examples-body {
+}

@@ -1,0 +1,41 @@
+@import '../global.scss';
+
+.tutorial-links {
+}
+
+.tutorial-link {
+
+    text-decoration:none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 0.2em solid #eee;
+    padding: 1em;
+    font-size: 1.4em;
+    cursor: pointer;
+
+    .tutorial-link-label {
+        color: $gray;
+    }
+
+    .tutorial-link-arrow {
+        color: $pink;
+    }
+
+}
+
+
+.tutorial-link:hover {
+
+    background: $pink;
+
+    .tutorial-link-label {
+        color: $white;
+    }
+
+    .tutorial-link-arrow {
+        color: $white;
+    }
+
+}

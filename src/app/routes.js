@@ -5,6 +5,8 @@ import Splash from './splash'
 import Level from './level'
 import Levels from './levels'
 import Stats from './stats'
+import Tutorial from './tutorial'
+import Tutorials from './tutorials'
 
 
 export default () =>
@@ -14,5 +16,7 @@ export default () =>
             <Route path='/levels' component={Levels} />
             <Route path='/arcade' component={Level} />
             <Route path='/stats' component={Stats} />
+            <Route path='/tutorial' component={Tutorial} />
+            <Route path='/tutorials' component={Tutorials} />
         </Route>
     </Router>

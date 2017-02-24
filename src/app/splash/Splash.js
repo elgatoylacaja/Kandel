@@ -36,7 +36,7 @@ const Buttons = () =>
             </a>
             <a
                 className='splash-tutorial'
-                href='/tutorial'
+                href='/tutorials'
             >
                 Tutorial
             </a>

@@ -4,7 +4,7 @@ import React, { PropTypes } from 'react'
 const EmptyRow = ({stat}) =>
     <div className='stats-row-empty'>
         <div className='stats-row-empty-type'>
-            {stat.type}
+            {stat.opType}
         </div>
         <div className='stats-row-empty-message'>
             Juega más niveles
@@ -15,10 +15,10 @@ const EmptyRow = ({stat}) =>
 const Row = ({stat}) =>
     <div className='stats-row'>
         <div className='stats-row-type'>
-            {stat.type}
+            {stat.opType}
         </div>
         <div className='stats-row-time'>
-            {stat.time + ' s'}
+            {stat.averageTime + ' s'}
         </div>
         <div className='stats-row-efficacy'>
             {stat.efficacy + '%'}
@@ -29,7 +29,7 @@ const Row = ({stat}) =>
 const List = ({stats}) =>
     <div className='stats-list'>
         {stats.map((stat, i) =>
-            stat.time 
+            stat.averageTime 
                 ?  <Row key={i} stat={stat} />
                 :  <EmptyRow key={i} stat={stat} />
         )}

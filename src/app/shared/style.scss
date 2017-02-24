@@ -1,6 +1,5 @@
 @import '../global.scss';
 
-
 .generic-header {
     color: $green; 
     padding: 1em 0;
@@ -10,10 +9,17 @@
     display: block;
 }
 
-
 .generic-header-title {
     margin-left: 1em;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.mini-logo {
+    margin: 2em auto 1em;
+    width: 6em;
+    height: 6em;
+    background: $light-gray;
+    border-radius: 40em;
 }

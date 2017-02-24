@@ -3,7 +3,12 @@ import React, { PropTypes } from 'react'
 
 const IncorrectFeedback = ({result}) =>
     <div className='arcade-feedback-incorrect'>
-        La respuesta era <b>{result}</b>
+        <span className='arcade-feedback-incorrect-label'>
+            La respuesta era
+        </span>
+        <span className='arcade-feedback-incorrect-number'>
+            {result}
+        </span>
     </div>
 
 

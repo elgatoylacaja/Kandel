@@ -1,5 +1,6 @@
 @import '../global.scss';
 
+
 .finished {
     position: relative;
     overflow: hidden;
@@ -23,12 +24,12 @@
     background: $white; 
     width: 100%;
     text-align: center;
-    padding: 2em 0 1em;
+    padding: 2em 0;
 }
 
 .finished-performance-level {
     margin: 1em 0 0;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 .finished-performance-stars {
@@ -37,7 +38,7 @@
 
 .finished-performance-star {
     color: $pink;
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0.1em;
 }
 
@@ -83,17 +84,14 @@
 }
 
 .finished-menu {
+    display: block;
     width: 100%;
-    color: #333;
-    text-align: center;
-    margin: 2em 0 1.5em;
+    color: $gray;
+    margin: 1em 0 0;
+    padding: 1em 0;
     text-transform: uppercase;
     font-weight: bold;
-}
-
-.finished-logo {
-    width: 100%;
-    color: $light-gray;
     text-align: center;
-    font-size: 3em;
+    text-decoration: none;
+    font-size: 1.1em;
 }

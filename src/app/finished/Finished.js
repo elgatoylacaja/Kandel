@@ -1,15 +1,11 @@
 import React, { PropTypes } from 'react'
-
-
-const Logo = () =>
-    <i className='fa fa-circle finished-logo'>
-    </i>
+import { MiniLogo } from '../shared'
 
 
 const MainMenu = () =>
-    <div className='finished-menu'>
+    <a href='/' className='finished-menu'>
         Menú principal
-    </div>
+    </a>
 
 
 const Replay = ({startLevel, level}) =>
@@ -73,7 +69,7 @@ const Content = props =>
         <Header {...props} />
         <Buttons {...props} />
         <MainMenu />
-        <Logo />
+        <MiniLogo />
     </div>
 
 

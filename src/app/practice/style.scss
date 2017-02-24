@@ -19,43 +19,42 @@
     cursor: pointer;
 
     .practice-button-optype {
-        font-size: 2.3em;
+        font-size: 2.5em;
         color: $gray;
     }
 
     .practice-button-difficulty-basic {
         color: $green;
-        font-size: 1.3em;
-        padding: 0.3em 0;
     }
 
     .practice-button-difficulty-intermediate {
         color: $yellow;
-        font-size: 1.3em;
-        padding: 0.3em 0;
     }
 
     .practice-button-difficulty-hard {
         color: $pink;
-        font-size: 1.3em;
-        padding: 0.3em 0;
     }
 
 }
 
+
+.practice-button-difficulty-basic,
+.practice-button-difficulty-intermediate,
+.practice-button-difficulty-hard {
+    font-size: 1.3em;
+    padding: 0.3em 0;
+}
+
+
 .practice-button:hover {
 
-    background: $pink; 
+    background: $light-gray; 
 
-    .practice-button-optype {
-        color: $white;
-    }
-
+    .practice-button-optype,
     .practice-button-difficulty-basic,
     .practice-button-difficulty-intermediate,
     .practice-button-difficulty-hard {
         color: $white;
     }
-
-
 }
+

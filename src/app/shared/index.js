@@ -1,4 +1,5 @@
 import GenericHeader from './GenericHeader'
+import MiniLogo from './MiniLogo'
 
 
-export { GenericHeader }
+export { GenericHeader, MiniLogo }

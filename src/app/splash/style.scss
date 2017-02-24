@@ -1,10 +1,10 @@
 @import '../global.scss';
 
 .splash-logo {
-    width: 13em;
-    height: 13em;
+    width: 18em;
+    height: 18em;
     border-radius: 50em;
-    background: #777;
+    background: $light-gray;
     margin: 3em auto 0;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .splash-stats {
-    color: $light-gray;
+    color: $gray;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
@@ -65,9 +65,10 @@
 .splash-lni,
 .splash-gato, {
     display: inline-block;
-    background: $gray;
-    width: 3em;
-    height: 3em;
+    background: $light-gray;
+    border-radius: 10em;
+    width: 4em;
+    height: 4em;
     margin: 1em;
 }
 

@@ -1,12 +1,5 @@
 import React from 'react'
-import { GenericHeader } from '../shared'
-
-
-const Logo = () =>
-    <div className='generic-logo'>
-        <div className='generic-logo-icon'>
-        </div>
-    </div>
+import { GenericHeader, MiniLogo } from '../shared'
 
 
 const TutorialLink = ({label}) =>
@@ -36,7 +29,7 @@ const Tutorial = () =>
     <div className='screen'>
         <GenericHeader title='tutorial' />
         <TutorialList />
-        <Logo />
+        <MiniLogo />
     </div>
 
 

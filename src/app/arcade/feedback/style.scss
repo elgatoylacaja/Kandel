@@ -8,12 +8,18 @@
     z-index: 999;
 }
 
+.arcade-feedback-correct {
+    background: $green;
+    color: $white;
+}
+
 .arcade-feedback-incorrect {
     background: $pink;
     color: $white;
 }
 
-.arcade-feedback-correct {
-    background: $green;
-    color: $white;
+.arcade-feedback-incorrect-number {
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 1em;
 }

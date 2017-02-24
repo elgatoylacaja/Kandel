@@ -1,0 +1,61 @@
+@import '../global.scss';
+
+.practice-list {
+    margin: 0px 0px 3em;
+}
+
+.practice-row {
+    text-align: center;
+}
+
+.practice-button {
+
+    display: inline-block;
+    background: $white;
+    margin: 0.6%;
+    width: 32%;
+    padding: 1.5em 0;
+    text-align: center;
+    cursor: pointer;
+
+    .practice-button-optype {
+        font-size: 2.3em;
+        color: $gray;
+    }
+
+    .practice-button-difficulty-basic {
+        color: $green;
+        font-size: 1.3em;
+        padding: 0.3em 0;
+    }
+
+    .practice-button-difficulty-intermediate {
+        color: $yellow;
+        font-size: 1.3em;
+        padding: 0.3em 0;
+    }
+
+    .practice-button-difficulty-hard {
+        color: $pink;
+        font-size: 1.3em;
+        padding: 0.3em 0;
+    }
+
+}
+
+.practice-button:hover {
+
+    background: $pink; 
+
+    .practice-button-optype {
+        color: $white;
+    }
+
+    .practice-button-difficulty-basic,
+    .practice-button-difficulty-intermediate,
+    .practice-button-difficulty-hard {
+        color: $white;
+    }
+
+
+}

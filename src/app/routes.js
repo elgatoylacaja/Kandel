@@ -7,6 +7,7 @@ import Levels from './levels'
 import Stats from './stats'
 import Tutorial from './tutorial'
 import Tutorials from './tutorials'
+import Practice from './practice'
 
 
 export default () =>
@@ -18,5 +19,6 @@ export default () =>
             <Route path='/stats' component={Stats} />
             <Route path='/tutorial' component={Tutorial} />
             <Route path='/tutorials' component={Tutorials} />
+            <Route path='/practice' component={Practice} />
         </Route>
     </Router>

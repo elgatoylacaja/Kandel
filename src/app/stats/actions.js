@@ -1,6 +1,6 @@
 import dummyTrials from './dummyTrials'
 export const GET_STATS = 'GET_STATS'
-const OPTYPES = ['1+1', '1x1', '2+2', '2x1', '3x1', '2^2', '4x1', '3x2', '4^2']
+const OPTYPES = ['1+1', '1x1', '2+2', '2x1', '3x1', '2^2', '4x1', '3^2', '4^2']
 
 
 const buildStat = ({opType, trials}) => {

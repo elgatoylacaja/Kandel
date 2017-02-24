@@ -7,6 +7,7 @@
 @import './tutorial/style.scss';
 @import './tutorials/style.scss';
 @import './practice/style.scss';
+@import './shared/style.scss';
 
 
 * {
@@ -23,15 +24,6 @@ body {
 .screen {
     margin: 0 auto;
     max-width: 500px;
-}
-
-.generic-header {
-    color: $green; 
-    padding: 1em 0;
-    font-size: 1.6em;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: block;
 }
 
 .generic-logo {

@@ -1,13 +1,5 @@
 import React from 'react'
-
-
-const GenericHeader = () =>
-    <a 
-        className='generic-header'
-        href='/'
-    >
-        { String.fromCharCode('8592') + ' Tutorial' }
-    </a>
+import { GenericHeader } from '../shared'
 
 
 const Examples = () =>
@@ -34,7 +26,7 @@ const Title = () =>
 
 const Tutorial = () =>
     <div className='screen'>
-        <GenericHeader />
+        <GenericHeader title='tutorial' />
         <div className='tutorial'>
             <Title />
             <Video />

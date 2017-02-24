@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import { GenericHeader } from '../shared'
 
 
 const Star = () =>
@@ -37,14 +38,6 @@ const Level = ({level, startLevel}) =>
     </div>
 
 
-const GenericHeader = () =>
-    <a 
-        className='generic-header'
-        href='/'
-    >
-        { String.fromCharCode('8592') + ' Arcade' }
-    </a>
-
 
 const LevelList = ({levels, startLevel}) =>
     <div className='levels'>
@@ -60,7 +53,7 @@ const LevelList = ({levels, startLevel}) =>
 
 const Levels = ({levels, startLevel}) =>
     <div className='screen'>
-        <GenericHeader />
+        <GenericHeader title='arcade' />
         <LevelList 
             levels={levels} 
             startLevel={startLevel}

@@ -1,13 +1,5 @@
 import React from 'react'
-
-
-const GenericHeader = () =>
-    <a 
-        className='generic-header'
-        href='/'
-    >
-        { String.fromCharCode('8592') + ' Practica' }
-    </a>
+import { GenericHeader } from '../shared'
 
 
 const ButtonHard = ({opType}) =>
@@ -74,7 +66,7 @@ const List = () =>
 
 const Practice = () =>
     <div className='screen'>
-        <GenericHeader />
+        <GenericHeader title='practica' />
         <List />
     </div>
 

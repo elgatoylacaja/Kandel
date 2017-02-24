@@ -1,4 +1,5 @@
 import React from 'react'
+import { GenericHeader } from '../shared'
 
 
 const Logo = () =>
@@ -6,15 +7,6 @@ const Logo = () =>
         <div className='generic-logo-icon'>
         </div>
     </div>
-
-
-const GenericHeader = () =>
-    <a 
-        className='generic-header'
-        href='/'
-    >
-        { String.fromCharCode('8592') + ' Tutorial' }
-    </a>
 
 
 const TutorialLink = ({label}) =>
@@ -42,7 +34,7 @@ const TutorialList = () =>
 
 const Tutorial = () =>
     <div className='screen'>
-        <GenericHeader />
+        <GenericHeader title='tutorial' />
         <TutorialList />
         <Logo />
     </div>

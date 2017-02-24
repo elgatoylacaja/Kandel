@@ -1,0 +1,19 @@
+@import '../global.scss';
+
+
+.generic-header {
+    color: $green; 
+    padding: 1em 0;
+    font-size: 1.6em;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+}
+
+
+.generic-header-title {
+    margin-left: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}

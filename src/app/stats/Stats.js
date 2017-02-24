@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import { GenericHeader } from '../shared'
 
 
 const EmptyRow = ({stat}) =>
@@ -50,19 +51,10 @@ const ListHeader = () =>
     </div>
 
 
-const GenericHeader = () =>
-    <a 
-        className='generic-header'
-        href='/'
-    >
-        { String.fromCharCode('8592') + ' Stats' }
-    </a>
-
-
 const Stats = ({stats}) =>
     <div className='screen'>
         <div className='stats'>
-            <GenericHeader />
+            <GenericHeader title='estadísticas' />
             <ListHeader />
             <List stats={stats} />
         </div>

@@ -1,3 +1,3 @@
-import Countdown from './container'
+import Countdown from './Countdown'
 
 export default Countdown

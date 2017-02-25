@@ -2,7 +2,6 @@ import {
     CREATE_TRIAL,
     ARCADE_TYPE_INPUT, 
     ARCADE_ERASE_INPUT, 
-    SUBMIT_TRIAL, 
     SHOW_FEEDBACK, 
     HIDE_FEEDBACK, 
 } from './actions'
@@ -57,21 +56,6 @@ export default (state = defaultState, action) => {
             input: Number(String(state.trial.input).slice(0, -1))
         }
       }
-
-    case SUBMIT_TRIAL:
-      return {
-        ...state,
-        trial: {
-            input: '',
-            operation: {
-                operand1: null,
-                operand2: null,
-                operator: null,
-                result: null,
-            },
-            time: null
-        }
-    }
 
     case SHOW_FEEDBACK:
       return {

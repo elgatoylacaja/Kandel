@@ -26,7 +26,7 @@ Arcade.propTypes = {
     feedback: PropTypes.object.isRequired,
     typeInput: PropTypes.func.isRequired,
     eraseInput: PropTypes.func.isRequired,
-    submitTrial: PropTypes.func.isRequired,
+    submit: PropTypes.func.isRequired,
 }
 
 

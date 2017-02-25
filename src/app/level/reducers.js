@@ -9,6 +9,7 @@ const defaultState = {
     totalTrials: 2,
     totalCorrect: 0,
     efficacy: 0,
+    maxCounter: 8000,
 }
 
 

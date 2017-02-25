@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { MiniLogo } from '../shared'
+import { Stars, MiniLogo } from '../shared'
 
 
 const MainMenu = () =>
@@ -37,15 +37,13 @@ const Congratulations = () =>
     </div>
 
 
-const Performance = ({level, totalCorrect, totalTrials}) =>
+const Performance = ({level, totalCorrect, efficacy, totalTrials}) =>
     <div className='finished-performance'>
         <div className='finished-performance-level'>
             Nivel {level}
         </div>
         <div className='finished-performance-stars'>
-            <i className='fa fa-star finished-performance-star'></i>
-            <i className='fa fa-star finished-performance-star'></i>
-            <i className='fa fa-star finished-performance-star'></i>
+            <Stars efficacy={efficacy} />
         </div>
         <div className='finished-performance-correct'>
             {totalCorrect + ' / ' + totalTrials + ' correctas'}
@@ -53,14 +51,10 @@ const Performance = ({level, totalCorrect, totalTrials}) =>
     </div>
 
 
-const Header = ({level, totalCorrect, totalTrials}) =>
+const Header = props =>
     <div className='finished-header'>
         <Congratulations />
-        <Performance 
-            level={level} 
-            totalCorrect={totalCorrect} 
-            totalTrials={totalTrials}
-        />
+        <Performance {...props} />
     </div>
 
 
@@ -89,6 +83,7 @@ const Finished = props =>
 
 Finished.propTypes = {
     level: PropTypes.number.isRequired,
+    efficacy: PropTypes.number.isRequired,
     totalCorrect: PropTypes.number.isRequired,
     totalTrials: PropTypes.number.isRequired,
     startLevel: PropTypes.func.isRequired,

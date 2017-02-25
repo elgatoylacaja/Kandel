@@ -1,17 +1,10 @@
 import React, { PropTypes } from 'react'
-import { GenericHeader } from '../shared'
+import { GenericHeader, Stars } from '../shared'
 
 
-const Star = () =>
-    <i className='fa fa-star level-stars-star'>
-    </i>
-
-
-const LevelStars = () =>
+const LevelStars = ({efficacy}) =>
     <span className='level-stars'>
-        <Star />
-        <Star />
-        <Star />
+        <Stars efficacy={efficacy} />
     </span>
 
 
@@ -27,22 +20,21 @@ const LevelNumber = ({level}) =>
     </span>
 
 
-const Level = ({level, startLevel}) =>
+const LevelRow = ({level, startLevel}) =>
     <div 
         className='level'
         onClick={e => startLevel(level.level)}
     >
         <LevelNumber level={level.level} />
         <LevelTime time={level.time} />
-        <LevelStars time={level.time} />
+        <LevelStars efficacy={level.efficacy} />
     </div>
-
 
 
 const LevelList = ({levels, startLevel}) =>
     <div className='levels'>
         {levels.map((level, i) =>
-            <Level 
+            <LevelRow
                 key={i} 
                 level={level} 
                 startLevel={startLevel}

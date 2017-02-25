@@ -1,7 +1,6 @@
 @import '../global.scss';
 
 .level {
-
     background: #fff;
     margin: 0.1em 0;
     display: flex;
@@ -9,47 +8,25 @@
     padding: 1em 1em;
     text-decoration: none;
     cursor: pointer;
-
-    .level-number {
-        color: $gray;
-        text-decoration: none;
-        font-size: 1.5em;
-    }
-
-    .level-time {
-        color: $green; 
-        text-decoration: none;
-        font-size: 1.35em;
-    }
-
-    .level-stars {
-        color: $pink;
-        text-decoration: none;
-    }
-
-    .level-stars-star {
-        margin: 0 0.1em;
-        font-size: 1.5em;
-    }
-
-
 }
 
+.level-number {
+    color: $gray;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.level-time {
+    color: $green; 
+    text-decoration: none;
+    font-size: 1.35em;
+}
+
+.level-stars {
+    text-decoration: none;
+    font-size: 1.5em;
+}
 
 .level:hover {
-
-    background: $pink; 
-
-    .level-number {
-        color: #fff;
-    }
-
-    .level-time {
-        color: #fff;
-    }
-
-    .level-stars {
-        color: #fff;
-    }
-
+    background: $super-light-gray; 
 }

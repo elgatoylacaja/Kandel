@@ -1,5 +1,5 @@
 import { SUBMIT_TRIAL } from '../arcade/actions'
-import { START_LEVEL } from './actions'
+import { START_LEVEL, FINISH_LEVEL } from './actions'
 
 
 const defaultState = {
@@ -8,6 +8,7 @@ const defaultState = {
     levelFinished: false,
     totalTrials: 2,
     totalCorrect: 0,
+    efficacy: 0,
 }
 
 
@@ -23,16 +24,24 @@ export default (state = defaultState, action) => {
         level: action.level,
         totalTrials: 2,
         totalCorrect: 0,
+        efficacy: 0,
     }
 
     case SUBMIT_TRIAL:
       return {
         ...state,
         trials: state.trials.concat(action.trial),
-        levelFinished: (state.trials.length + 1 === state.totalTrials),
         totalCorrect: action.trial.input === action.trial.operation.result
                         ? state.totalCorrect + 1
                         : state.totalCorrect
+    }
+
+
+    case FINISH_LEVEL:
+      return {
+        ...state,
+        levelFinished: true,
+        efficacy: (state.totalCorrect / state.totalTrials) * 100
     }
         
     default:

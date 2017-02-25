@@ -31,6 +31,7 @@ class ArcadeContainer extends Component {
             setTimeout(e => {
                 this.props.hideFeedback()
                 this.props.submitTrial(trial)
+                this.props.finishLevel()
             }, 3000)
         }
     }
